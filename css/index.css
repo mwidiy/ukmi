@@ -633,6 +633,7 @@ footer ul li:hover {
    /* =================  CATEGORIES query 2 ================== */
 
    .categories_right {
+     margin: 1rem;
      grid-template-columns: 1fr 1fr;
      gap: 0.7rem;
    }
