@@ -553,6 +553,7 @@ footer ul li:hover {
     }
 
     .categories_left {
+        margin-left: 1rem;
         margin-right: 0;
     }
 
