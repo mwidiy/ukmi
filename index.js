@@ -22,18 +22,25 @@ faqs.forEach(faq => {
 });
 
 
-//swiping object
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    // when window widht is >= 600px
-    breakpoins: {
-        600: {
-            slidesPerView: 2
-        }
-    }
-  }); 
+
+
+    // show navbar tablet
+    const menu = document.querySelector(".nav_menu");
+    const menuBtn = document.querySelector("#open-menu-btn");
+    const menuClose = document.querySelector("#close-menu-btn");
+    
+    menuBtn.addEventListener('click', () => {
+        menu.style.display = "flex";
+        menuClose.style.display = "inline-block";
+        menuBtn.style.display = "none";
+    })
+
+// close nav menu 
+
+const closeNav = () => {
+    menu.style.display = "none";
+    menuClose.style.display = "none";
+    menuBtn.style.display = "inline-block";
+};
+
+menuClose.addEventListener('click', closeNav )
