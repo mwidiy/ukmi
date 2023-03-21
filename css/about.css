@@ -122,7 +122,7 @@
 
 @media screen and (max-width: 1024px) {
     .about_achievements {
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     .about_achievements-container {
@@ -147,9 +147,10 @@
     /* ===================== MEDIA QUERYS (phone) =================== */
 
     @media screen and (max-width: 600px) {
-        .achievements_card {
-            grid-template-columns: 1fr 1fr;
-            gap: 1.7rem;
+
+        .achievements_cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.7rem;
         }
 
         .team_container {
