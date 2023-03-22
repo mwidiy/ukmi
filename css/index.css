@@ -284,6 +284,10 @@ header {
     transition: var(--transition);
 }
 
+/* .courses_img {
+    
+} */
+
 .course:hover {
     background: transparent;
     border-color: var(--color-primary);
