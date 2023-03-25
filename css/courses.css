@@ -1,3 +1,21 @@
-.courses {
+.library {
     margin-top: 1rem;
 }
+
+
+.library_img {
+    background-image: url(../img/perpusbg.jpg);
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+}
+
+.judulpp {
+    align-self: center;
+}
+
+.search {
+    text-align: center;
+}
+
+
