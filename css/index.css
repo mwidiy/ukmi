@@ -131,6 +131,12 @@ nav {
     align-items: center;
 }
 
+/* .nav_container img {
+    width: 60px;
+    height: 60px;
+    margin-top: 5rem;
+} */
+
 nav button {
     display: none;
 }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/kelender.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html" class="nav-logo"><h4>UKMI</h4></a>
+            <!-- <img class="nav-logo" src="./img/ukmi.png" alt=""> -->
+            <ul class="nav_menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./courses.html">Library</a></li>
+                <li><a href="./contact.html">Contack</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="fa fa-bars"></i></button>
+            <button id="close-menu-btn"><i class="fa fa-xmark"></i></button>
+        </div>
+    </nav>
+      
+    <h2>SEMARAH RAMDHAN KAMPUS</h2>
+    <div class="container event">
+        <div class="card">
+            <img src="../img/srk.jpeg" alt="Gambar Card">
+            <div class="card-detail">
+              <button class="btn-detail">Detail</button>
+              <div class="popup">
+                <div class="popup-content">
+                  <span class="close">&times;</span>
+                  <img src="../img/srk.jpeg" alt="Gambar Detail">
+                  <p>Ini adalah artikel tentang gambar tersebut.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="calendar">
+        <div class="month">
+          <h1>April</h1>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days">
+          <div class="day">1</div>
+          <div class="day">2</div>
+          <div class="day">3</div>
+          <div class="day">4</div>
+          <div class="day">5</div>
+          <div class="day">6</div>
+          <div class="day">7</div>
+          <div class="day">8</div>
+          <div class="day">9</div>
+          <div class="day">10</div>
+          <div class="day">11</div>
+          <div class="day">12</div>
+          <div class="day">13</div>
+          <div class="day">14</div>
+          <div class="day">15</div>
+          <div class="day">16</div>
+          <div class="day">17</div>
+          <div class="day">18</div>
+          <div class="day">19</div>
+          <div class="day">20</div>
+          <div class="day">21</div>
+          <div class="day">22</div>
+          <div class="day">23</div>
+          <div class="day">24</div>
+          <div class="day">25</div>
+          <div class="day">26</div>
+          <div class="day">27</div>
+          <div class="day">28</div>
+          <div class="day">29</div>
+          <div class="day">30</div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="" class="permalink"><h4>Unit kegiatan mahasiswa islam</h4></a>
+                <p>atau disingakat UKMI adalah kegiatan organisasi dakwa kampus yang beorientasi pada kegiatan islami</p>
+            </div>
+
+            <div class="footer_2">
+                <h4>Permalink</h4>
+                <ul class="permalink">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Library</a></li>
+                    <li><a href="contact.html">Contack</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_3">
+                <h4>Protector</h4>
+                <ul class="privacy">
+                    <li><a href="https://www.upstegal.ac.id/">Universitas Pancasakti</a></li>
+                    <li><a href="#">FSLDK</a></li>
+                    <li><a href="https://amki.ac.id/">AMKI</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_4">
+                <h4>contack us</h4>
+                 <div>
+                    <p>087711753020</p>
+                    <p>UkmiUps@gmail.com</p>
+                 </div>
+
+                 <ul class="footer_social">
+                    <li>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                 </ul>                  
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <small>COPYRIGHT UKMI.UPS 2023</small>
+        </div>
+    </footer>
+<script src="../index.js"></script>
+<script>
+    const detail = document.querySelector('.btn-detail');
+    const popup = document.querySelector('.popup');
+    detail.addEventListener('click',function() {
+        popup.style.display = "flex";
+    });
+</script>
+</body>
+</html>
+  

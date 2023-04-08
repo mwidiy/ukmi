@@ -10,7 +10,7 @@
     display: flex;
 }
 
-.judulpp {
+.library_text {
     align-self: center;
 }
 
@@ -18,4 +18,228 @@
     text-align: center;
 }
 
+#search_text {
+    width: 15rem;
+    height: 3rem;
+}
 
+
+/* ================ card */
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: var(--color-bg1);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 10px;
+}
+
+.book-cover {
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+.book-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.book-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.book-desc {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.book-rating {
+  margin-bottom: 10px;
+}
+
+.book-rating .fa {
+  font-size: 16px;
+  color: white;
+}
+
+.book-rating .checked {
+  color: orange;
+}
+
+.book-buttons {
+  margin-top: 20px;
+}
+
+.book-buttons button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.book-buttons button:hover {
+  background-color: #0069d9;
+}
+
+
+/* ====================== pop up */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content .book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.popup-content .book img {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.popup-content .book-info {
+  text-align: left;
+}
+
+.popup-content .book-info h3 {
+  margin-top: 0;
+}
+
+.popup-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Perangkat kecil */
+@media (max-width: 576px) {
+  .popup-content {
+    width: 90%;
+  }
+
+  .popup-content .book {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popup-content .book img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Perangkat sedang */
+@media (min-width: 576px) and (max-width: 992px) {
+  .popup-content {
+    width: 70%;
+  }
+
+  .popup-content .book {
+    flex-direction: row;
+  }
+
+  .popup-content .book img {
+    max-width: 120px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+/* Perangkat besar */
+@media (min-width: 992px) {
+  .popup-content {
+    width: 50%;
+  }
+
+  .popup-content .book {
+    flex-direction: row;
+  }
+
+  .popup-content .book img {
+    max-width: 150px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.popup-content .book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.popup-content .book-info {
+  text-align: left;
+}
+
+.popup-content .book-info h3 {
+  margin-top: 0;
+}
+
+.popup-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -21,9 +21,6 @@ faqs.forEach(faq => {
     })
 });
 
-
-
-
     // show navbar tablet
     const menu = document.querySelector(".nav_menu");
     const menuBtn = document.querySelector("#open-menu-btn");
@@ -44,3 +41,35 @@ const closeNav = () => {
 };
 
 menuClose.addEventListener('click', closeNav )
+
+const d = console.log.bind(console)
+
+$.ajax({
+    url: "https://www.googleapis.com/books/v1/volumes?q=search+terms",
+    type: "GET",
+    success: function(response) {
+        var book = response.items
+        book.forEach((item, index) => {
+            var data = item.volumeInfo
+            console.log(data)
+            d()
+            document.getElementById("ilb_content").innerHTML += `
+            <div class="card">
+                <div class="book-cover" style="background-image: url('${data.imageLinks.thumbnail}');"></div>
+                <div class="book-info">
+                  <h2 class="book-title">${data.title}</h2>
+                  <p class="book-desc">${data.authors}</p>
+                  <div class="book-buttons">
+                    <a href="${data.previewLink}" target="_blank">
+                        <button class="download-button">Preview</button>
+                    </a>
+                  </div>
+                </div>
+              </div>`
+        })
+
+    },
+    error: function(xhr, status, error) {
+      console.log("Error: " + error);
+    }
+  });
