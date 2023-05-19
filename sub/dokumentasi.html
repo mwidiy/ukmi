@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+  <title>Galeri Foto</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow: auto;
+    }
+
+    .modal-content {
+      display: block;
+      margin: auto;
+      max-width: 800px;
+      max-height: 80%;
+    }
+
+    .modal-content img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+
+    /* Media query untuk perangkat kecil (mobile) */
+    @media only screen and (max-width: 767px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Media query untuk perangkat sedang (tablet) */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Media query untuk perangkat besar (desktop) */
+    @media only screen and (min-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- =================== NAVBAR =================== -->
+  <nav>
+    <div class="container nav_container">
+        <a href="index.html" class="nav-logo"><h4>UKMI</h4></a>
+        <!-- <img class="nav-logo" src="./img/ukmi.png" alt=""> -->
+        <ul class="nav_menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./courses.html">Library</a></li>
+            <li><a href="./contact.html">Contack</a></li>
+        </ul>
+        <button id="open-menu-btn"><i class="fa fa-bars"></i></button>
+        <button id="close-menu-btn"><i class="fa fa-xmark"></i></button>
+    </div>
+</nav>
+<!-- =================== END NAVBAR =================== -->
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRabC6C88fmj5nH39lxqquUqU5EEjK4T8QT1A&usqp=CAU" alt="Foto 1" onclick="openModal('foto1.jpg')">
+    </div>
+    <div class="gallery-item">
+      <img src="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/40638741/1800" alt="Foto 2" onclick="openModal('foto2.jpg')">
+    </div>
+    <div class="gallery-item">
+      <img src="../img/chibi4-removebg-preview.png" alt="Foto 3" onclick="openModal('foto3.jpg')">
+    </div>
+    <!-- Tambahkan foto lainnya di sini -->
+
+    <!-- =================== FUTER ================== -->
+    <footer>
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="" class="permalink"><h4>Unit kegiatan mahasiswa islam</h4></a>
+                <p>atau disingakat UKMI adalah kegiatan organisasi dakwa kampus yang beorientasi pada kegiatan islami</p>
+            </div>
+
+            <div class="footer_2">
+                <h4>Permalink</h4>
+                <ul class="permalink">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Library</a></li>
+                    <li><a href="contact.html">Contack</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_3">
+                <h4>Protector</h4>
+                <ul class="privacy">
+                    <li><a href="https://www.upstegal.ac.id/">Universitas Pancasakti</a></li>
+                    <li><a href="#">FSLDK</a></li>
+                    <li><a href="https://amki.ac.id/">AMKI</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_4">
+                <h4>contack us</h4>
+                 <div>
+                    <p>087711753020</p>
+                    <p>UkmiUps@gmail.com</p>
+                 </div>
+
+                 <ul class="footer_social">
+                    <li>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+                 </ul>                  
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <small>COPYRIGHT UKMI.UPS 2023</small>
+        </div>
+    </footer>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      var modal = document.getElementById("myModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>
