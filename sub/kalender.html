@@ -16,17 +16,17 @@
             <a href="index.html" class="nav-logo"><h4>UKMI</h4></a>
             <!-- <img class="nav-logo" src="./img/ukmi.png" alt=""> -->
             <ul class="nav_menu">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./courses.html">Library</a></li>
-                <li><a href="./contact.html">Contack</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../courses.html">Library</a></li>
+                <li><a href="../contact.html">Contack</a></li>
             </ul>
             <button id="open-menu-btn"><i class="fa fa-bars"></i></button>
             <button id="close-menu-btn"><i class="fa fa-xmark"></i></button>
         </div>
     </nav>
       
-    <h2>SEMARAH RAMDHAN KAMPUS</h2>
+    <h2>OPERA 2</h2>
     <div class="container event">
         <div class="card">
             <img src="../img/srk.jpeg" alt="Gambar Card">
@@ -45,18 +45,22 @@
 
     <div class="calendar">
         <div class="month">
-          <h1>April</h1>
+          <h1>2023 juni</h1>
         </div>
         <div class="weekdays">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
+          <div>Minggu</div>
+          <div>Senin</div>
+          <div>Selasa</div>
+          <div>Rabu</div>
+          <div>Kamis</div>
+          <div>Jumat</div>
+          <div>Sabtu</div>
         </div>
         <div class="days">
+          <div class="day late">28</div>
+          <div class="day late">29</div>
+          <div class="day late">30</div>
+          <div class="day late">31</div>
           <div class="day">1</div>
           <div class="day">2</div>
           <div class="day">3</div>
@@ -65,9 +69,9 @@
           <div class="day">6</div>
           <div class="day">7</div>
           <div class="day">8</div>
-          <div class="day">9</div>
-          <div class="day">10</div>
-          <div class="day">11</div>
+          <div class="day special-day">9</div>
+          <div class="day special-day">10</div>
+          <div class="day special-day">11</div>
           <div class="day">12</div>
           <div class="day">13</div>
           <div class="day">14</div>
@@ -87,6 +91,7 @@
           <div class="day">28</div>
           <div class="day">29</div>
           <div class="day">30</div>
+          <div class="day late">1</div>
         </div>
       </div>
 
@@ -145,11 +150,21 @@
     </footer>
 <script src="../index.js"></script>
 <script>
-    const detail = document.querySelector('.btn-detail');
+    // script.js
+    window.onload = function() {
+    const btnDetail = document.querySelector('.btn-detail');
     const popup = document.querySelector('.popup');
-    detail.addEventListener('click',function() {
-        popup.style.display = "flex";
+    const closeBtn = document.querySelector('.close');
+
+    btnDetail.addEventListener('click', function() {
+        popup.style.display = 'block';
     });
+
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+    });
+    };
+
 </script>
 </body>
 </html>
