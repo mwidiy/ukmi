@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+h2 {
+    margin: 10rem auto 2rem;
+    text-align: center;
+    color: red;
+  }
+
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.calendar {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+td {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efek hover untuk tanggal */
+td:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Warna latar belakang untuk acara */
+.event {
+    background-color: #e74c3c;
+    color: #fff;
+    position: relative;
+}
+
+/* Informasi acara yang muncul saat hover */
+.event:hover .event-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.event-info {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Media query untuk tablet */
+@media (max-width: 768px) {
+    .calendar-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media query untuk handphone */
+@media (max-width: 480px) {
+    .calendar-container {
+        grid-template-columns: 1fr;
+    }
+}
