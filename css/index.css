@@ -654,14 +654,18 @@ footer ul li:hover {
      grid-template-columns: 1fr;
      text-align: center;
      margin-top: -2rem;
+     margin: auto;
+     place-items: start center;
    }
 
-   .header_left {
-    margin-left: -1rem;
-   }
 
    .header_left p {
      padding: 1.2rem;
+   }
+
+   .header_right-img img {
+    width: 350px;
+    height: 350px;
    }
 
    /* =================  CATEGORIES query 2 ================== */
