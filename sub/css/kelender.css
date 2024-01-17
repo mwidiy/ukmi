@@ -83,6 +83,7 @@ td:hover {
   border-radius: 5px;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
 }
 
 /* Media query untuk tablet */
