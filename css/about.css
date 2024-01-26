@@ -49,8 +49,27 @@
     background-color: var(--color-primary);
 }
 
+.achievement_card:nth-child(4) .acievements_icon {
+    background-color: rgb(134, 0, 125);
+}
+
+.achievement_card:nth-child(5) .acievements_icon {
+    background-color: rgb(89, 78, 88);
+}
+
 .achievement_card p {
     margin-top: 1rem;
+}
+
+.achievement_card .deskripsi {
+   
+    display: none;
+}
+
+.buka .deskripsi {
+    color: salmon;
+    display: block;
+    text-align: left;
 }
 
 
