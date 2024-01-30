@@ -95,6 +95,10 @@
         margin: 0 auto;
     }
 
+    .achievement_card h4 {
+        font-size: 0.5rem;
+    }
+
     .team_container {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
